@@ -170,11 +170,13 @@ export default class TabView<T extends Route> extends React.Component<
                     exec={Animated.set(positionListener, position)}
                   />
                 ) : null}
+                <View style={{ height: 63 }}>
                 {tabBarPosition === 'top' &&
                   renderTabBar({
                     ...sceneRendererProps,
                     navigationState,
                   })}
+                  </View>
                 {render(
                   navigationState.routes.map((route, i) => {
                     return (
